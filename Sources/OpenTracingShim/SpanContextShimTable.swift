@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 public class SpanContextShimTable {
     private let lock = ReadWriteLock()

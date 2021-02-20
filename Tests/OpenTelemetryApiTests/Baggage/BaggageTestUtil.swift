@@ -14,7 +14,7 @@
 //
 
 import Foundation
-@testable import OpenTelemetryApi
+@testable import OpenTelemetryApi-mikeumus
 
 struct BaggageTestUtil {
     static func listToBaggage(entries: [Entry]) -> DefaultBaggage {

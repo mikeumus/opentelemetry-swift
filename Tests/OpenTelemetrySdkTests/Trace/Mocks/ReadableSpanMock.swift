@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 @testable import OpenTelemetrySdk-mikeumus
 
 class ReadableSpanMock: ReadableSpan {

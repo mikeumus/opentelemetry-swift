@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 struct TelemetryInfo {
     var tracer: Tracer

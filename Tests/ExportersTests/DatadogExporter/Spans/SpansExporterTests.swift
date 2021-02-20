@@ -14,7 +14,7 @@
 //
 
 @testable import DatadogExporter-mikeumus
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 @testable import OpenTelemetrySdk-mikeumus
 import XCTest
 

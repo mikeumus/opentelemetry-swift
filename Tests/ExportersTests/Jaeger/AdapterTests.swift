@@ -16,7 +16,7 @@
 import Foundation
 
 @testable import JaegerExporter
-@testable import OpenTelemetryApi
+@testable import OpenTelemetryApi-mikeumus
 @testable import OpenTelemetrySdk-mikeumus
 import Thrift
 import XCTest

@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 protocol BaseShimProtocol {
     var telemetryInfo: TelemetryInfo { get }

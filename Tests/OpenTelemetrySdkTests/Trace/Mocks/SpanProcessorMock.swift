@@ -15,7 +15,7 @@
 
 import Foundation
 import OpenTelemetrySdk-mikeumus
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 class SpanProcessorMock: SpanProcessor {
     var onStartCalledTimes = 0

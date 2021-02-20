@@ -10,9 +10,9 @@ let package = Package(
                 .tvOS(.v11),
                 .watchOS(.v3)],
     products: [
-//        .library(name: "OpenTelemetryApi", type: .dynamic, targets: ["OpenTelemetryApi"]),
-//        .library(name: "libOpenTelemetryApi", type: .static, targets: ["OpenTelemetryApi"]),
-//        .library(name: "OpenTelemetrySdk-mikeumus", type: .dynamic, targets: ["OpenTelemetrySdk-mikeumus"]),
+        .library(name: "OpenTelemetryApi-mikeumus", type: .dynamic, targets: ["OpenTelemetryApi-mikeumus"]),
+//        .library(name: "libOpenTelemetryApi-mikeumus", type: .static, targets: ["OpenTelemetryApi-mikeumus"]),
+        .library(name: "OpenTelemetrySdk-mikeumus", type: .dynamic, targets: ["OpenTelemetrySdk-mikeumus"]),
 //        .library(name: "libOpenTelemetrySdk-mikeumus", type: .static, targets: ["OpenTelemetrySdk-mikeumus"]),
 //        .library(name: "OpenTracingShim-mikeumus", type: .dynamic, targets: ["OpenTracingShim-mikeumus"]),
 //        .library(name: "libOpenTracingShim-mikeumus-mikeumus", type: .static, targets: ["OpenTracingShim-mikeumus"]),
@@ -34,30 +34,30 @@ let package = Package(
 //        .executable(name: "loggingTracer-mikeumus", targets: ["LoggingTracer"]),
     ],
     dependencies: [
-        .package(name: "Opentracing", url: "https://github.com/undefinedlabs/opentracing-objc", from: "0.5.2"),
+//        .package(name: "Opentracing", url: "https://github.com/undefinedlabs/opentracing-objc", from: "0.5.2"),
         .package(name: "Thrift", url: "https://github.com/undefinedlabs/Thrift-Swift", from: "1.1.1"),
-        .package(name: "swift-nio", url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
+//        .package(name: "swift-nio", url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
         .package(name: "grpc-swift", url: "https://github.com/grpc/grpc-swift.git", .exact("1.0.0-alpha.12")),
         .package(name: "SwiftProtobuf", url: "https://github.com/apple/swift-protobuf.git", from: "1.6.0"),
         .package(name: "swift-atomics", url: "https://github.com/apple/swift-atomics.git", from: "0.0.1")
     ],
     targets: [
-//        .target(name: "OpenTelemetryApi",
-//                dependencies: []
-//        ),
-//        .target(name: "OpenTelemetrySdk-mikeumus",
-//                dependencies: ["OpenTelemetryApi",
-//                               .product(name: "Atomics", package: "swift-atomics")]
-//        ),
+        .target(name: "OpenTelemetryApi-mikeumus",
+                dependencies: []
+        ),
+        .target(name: "OpenTelemetrySdk-mikeumus",
+                dependencies: ["OpenTelemetryApi-mikeumus",
+                               .product(name: "Atomics", package: "swift-atomics")]
+        ),
 //        .target(name: "OpenTracingShim-mikeumus",
 //                dependencies: ["OpenTelemetrySdk-mikeumus",
 //                               "Opentracing"]
 //        ),
-//        .target(name: "JaegerExporter",
-//                dependencies: ["OpenTelemetrySdk-mikeumus",
-//                               .product(name: "Thrift", package: "Thrift")],
-//                path: "Sources/Exporters/Jaeger"
-//        ),
+        .target(name: "JaegerExporter",
+                dependencies: ["OpenTelemetrySdk-mikeumus",
+                               .product(name: "Thrift", package: "Thrift")],
+                path: "Sources/Exporters/Jaeger"
+        ),
 //        .target(name: "ZipkinExporter-mikeumus",
 //                dependencies: ["OpenTelemetrySdk-mikeumus"],
 //                path: "Sources/Exporters/Zipkin"
@@ -86,9 +86,9 @@ let package = Package(
 //                path: "Sources/Exporters/DatadogExporter-mikeumus",
 //                exclude: ["NOTICE", "README.md"]
 //        ),
-//        .testTarget(name: "OpenTelemetryApiTests",
-//                    dependencies: ["OpenTelemetryApi"],
-//                    path: "Tests/OpenTelemetryApiTests"
+//        .testTarget(name: "OpenTelemetryApi-mikeumusTests",
+//                    dependencies: ["OpenTelemetryApi-mikeumus"],
+//                    path: "Tests/OpenTelemetryApi-mikeumusTests"
 //        ),
 //        .testTarget(name: "OpenTracingShim-mikeumusTests",
 //                    dependencies: ["OpenTracingShim-mikeumus",
@@ -96,7 +96,7 @@ let package = Package(
 //                    path: "Tests/OpenTracingShim-mikeumus"
 //        ),
 //        .testTarget(name: "OpenTelemetrySdk-mikeumusTests",
-//                    dependencies: ["OpenTelemetryApi",
+//                    dependencies: ["OpenTelemetryApi-mikeumus",
 //                                   "OpenTelemetrySdk-mikeumus"],
 //                    path: "Tests/OpenTelemetrySdk-mikeumusTests"
 //        ),
@@ -127,7 +127,7 @@ let package = Package(
 //                    path: "Tests/ExportersTests/DatadogExporter-mikeumus"
 //        ),
 //        .target(name: "loggingTracer-mikeumus",
-//                dependencies: ["OpenTelemetryApi"],
+//                dependencies: ["OpenTelemetryApi-mikeumus"],
 //                path: "Examples/Logging Tracer"
 //        ),
 //        .target(name: "simpleExporter-mikeumus",
