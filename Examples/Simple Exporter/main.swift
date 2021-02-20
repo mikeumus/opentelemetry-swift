@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import JaegerExporter-mikeumus
+import JaegerExporter
 import OpenTelemetrySdk-mikeumus
 import StdoutExporter-mikeumus
 import ZipkinExporter-mikeumus

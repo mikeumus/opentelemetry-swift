@@ -15,7 +15,7 @@
 
 import Foundation
 
-@testable import JaegerExporter-mikeumus
+@testable import JaegerExporter
 @testable import OpenTelemetryApi-mikeumus
 @testable import OpenTelemetrySdk-mikeumus
 import Thrift
@@ -272,7 +272,7 @@ class AdapterTests: XCTestCase {
         return tagsList?.first { $0.key == key }
     }
 
-    private static func assertHasFollowsFrom(jaegerSpan: JaegerExporter-mikeumus.Span) {
+    private static func assertHasFollowsFrom(jaegerSpan: JaegerExporter.Span) {
         var found = false
         for spanRef in jaegerSpan.references! {
             if spanRef.refType == .follows_from {
@@ -285,7 +285,7 @@ class AdapterTests: XCTestCase {
         XCTAssertTrue(found)
     }
 
-    private static func assertHasParent(jaegerSpan: JaegerExporter-mikeumus.Span) {
+    private static func assertHasParent(jaegerSpan: JaegerExporter.Span) {
         var found = false
         for spanRef in jaegerSpan.references! {
             if spanRef.refType == .child_of {
