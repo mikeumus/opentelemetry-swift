@@ -47,7 +47,7 @@ let package = Package(
         ),
         .target(name: "OpenTelemetrySdk-mikeumus",
                 dependencies: ["OpenTelemetryApi-mikeumus",
-                               .product(name: "Atomics", package: "swift-atomics")]
+                               .product(name: "Atomics-mikeumus", package: "swift-atomics")]
         ),
 //        .target(name: "OpenTracingShim-mikeumus",
 //                dependencies: ["OpenTelemetrySdk-mikeumus",
