@@ -14,8 +14,8 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
-import OpenTelemetrySdk-mikeumus
+import OpenTelemetryApi
+import OpenTelemetrySdk
 import Thrift
 
 final class Adapter {

@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk-mikeumus
+import OpenTelemetrySdk
 import Thrift
 
 public class JaegerSpanExporter: SpanExporter {
