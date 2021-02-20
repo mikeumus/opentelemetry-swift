@@ -16,8 +16,8 @@ let package = Package(
 //        .library(name: "libOpenTelemetrySdk-mikeumus", type: .static, targets: ["OpenTelemetrySdk-mikeumus"]),
 //        .library(name: "OpenTracingShim-mikeumus", type: .dynamic, targets: ["OpenTracingShim-mikeumus"]),
 //        .library(name: "libOpenTracingShim-mikeumus-mikeumus", type: .static, targets: ["OpenTracingShim-mikeumus"]),
-        .library(name: "JaegerExporterMikeumus", type: .dynamic, targets: ["JaegerExporterMikeumus"]),
-        .library(name: "libJaegerExporterMikeumus", type: .static, targets: ["JaegerExporterMikeumus"]),
+        .library(name: "JaegerExporter", type: .dynamic, targets: ["JaegerExporter"]),
+        .library(name: "libJaegerExporter", type: .static, targets: ["JaegerExporter"]),
 //        .library(name: "ZipkinExporter-mikeumus", type: .dynamic, targets: ["ZipkinExporter-mikeumus"]),
 //        .library(name: "libZipkinExporter-mikeumus", type: .static, targets: ["ZipkinExporter-mikeumus"]),
 //        .library(name: "StdoutExporter-mikeumus", type: .dynamic, targets: ["StdoutExporter-mikeumus"]),
@@ -53,7 +53,7 @@ let package = Package(
 //                dependencies: ["OpenTelemetrySdk-mikeumus",
 //                               "Opentracing"]
 //        ),
-//        .target(name: "JaegerExporterMikeumus",
+//        .target(name: "JaegerExporter",
 //                dependencies: ["OpenTelemetrySdk-mikeumus",
 //                               .product(name: "Thrift", package: "Thrift")],
 //                path: "Sources/Exporters/Jaeger"
@@ -100,8 +100,8 @@ let package = Package(
 //                                   "OpenTelemetrySdk-mikeumus"],
 //                    path: "Tests/OpenTelemetrySdk-mikeumusTests"
 //        ),
-        .testTarget(name: "JaegerExporterMikeumusTests",
-                    dependencies: ["JaegerExporterMikeumus"],
+        .testTarget(name: "JaegerExporterTests",
+                    dependencies: ["JaegerExporter"],
                     path: "Tests/ExportersTests/Jaeger"
         ),
 //        .testTarget(name: "ZipkinExporter-mikeumusTests",
@@ -131,7 +131,7 @@ let package = Package(
 //                path: "Examples/Logging Tracer"
 //        ),
 //        .target(name: "simpleExporter-mikeumus",
-//                dependencies: ["OpenTelemetrySdk-mikeumus", "JaegerExporterMikeumus", "StdoutExporter-mikeumus", "ZipkinExporter-mikeumus"],
+//                dependencies: ["OpenTelemetrySdk-mikeumus", "JaegerExporter", "StdoutExporter-mikeumus", "ZipkinExporter-mikeumus"],
 //                path: "Examples/Simple Exporter",
 //                exclude: ["README.md"]
 //        ),
