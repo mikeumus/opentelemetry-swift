@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "opentelemetry-swift",
+    name: "opentelemetry-swift-mikeumus",
     platforms: [.macOS(.v10_13),
                 .iOS(.v11),
                 .tvOS(.v11),
