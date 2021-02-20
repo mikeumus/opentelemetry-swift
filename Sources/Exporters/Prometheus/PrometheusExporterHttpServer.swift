@@ -17,13 +17,13 @@ import Foundation
 import NIO
 import NIOHTTP1
 
-public class PrometheusExporterHttpServer {
+public class PrometheusExporter-mikeumusHttpServer {
     private let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
     private var host: String
     private var port: Int
-    var exporter: PrometheusExporter
+    var exporter: PrometheusExporter-mikeumus
 
-    public init(exporter: PrometheusExporter) {
+    public init(exporter: PrometheusExporter-mikeumus) {
         self.exporter = exporter
 
         let url = URL(string: exporter.options.url)
@@ -74,9 +74,9 @@ public class PrometheusExporterHttpServer {
         public typealias InboundIn = HTTPServerRequestPart
         public typealias OutboundOut = HTTPServerResponsePart
 
-        var exporter: PrometheusExporter
+        var exporter: PrometheusExporter-mikeumus
 
-        init(exporter: PrometheusExporter) {
+        init(exporter: PrometheusExporter-mikeumus) {
             self.exporter = exporter
         }
 
@@ -94,7 +94,7 @@ public class PrometheusExporterHttpServer {
                     let part = HTTPServerResponsePart.head(head)
                     _ = channel.write(part)
 
-                    let metrics = PrometheusExporterExtensions.writeMetricsCollection(exporter: exporter)
+                    let metrics = PrometheusExporter-mikeumusExtensions.writeMetricsCollection(exporter: exporter)
                     var buffer = channel.allocator.buffer(capacity: metrics.count)
                     buffer.writeString(metrics)
                     let bodypart = HTTPServerResponsePart.body(.byteBuffer(buffer))

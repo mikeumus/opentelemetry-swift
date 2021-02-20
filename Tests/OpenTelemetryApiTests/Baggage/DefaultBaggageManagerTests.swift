@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 import XCTest
 
 private let key = EntryKey(name: "key")!

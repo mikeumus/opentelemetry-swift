@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 import Atomics
 
 /// Implementation for the Span class that records trace events.

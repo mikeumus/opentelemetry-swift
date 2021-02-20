@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 import XCTest
 
 class B3PropagatorTests: XCTestCase {

@@ -13,9 +13,9 @@
 // limitations under the License.
 //
 
-import OpenTelemetryApi
-import OpenTelemetrySdk
-@testable import OpenTracingShim
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
+@testable import OpenTracingShim-mikeumus
 import XCTest
 
 class SpanShimTests: XCTestCase {

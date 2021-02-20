@@ -22,7 +22,7 @@ import Foundation
 import SystemConfiguration
 #endif
 
-@testable import DatadogExporter
+@testable import DatadogExporter-mikeumus
 
 class DeviceTests: XCTestCase {
     func testWhenRunningOnMobile_itReturnsDevice() {

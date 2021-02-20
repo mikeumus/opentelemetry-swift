@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
 struct ResourceAdapter {
     static func toProtoResource(resource: Resource) -> Opentelemetry_Proto_Resource_V1_Resource {

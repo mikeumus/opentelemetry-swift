@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 struct IntObserverMetricHandleSdk: IntObserverMetricHandle {
     public private(set) var aggregator = LastValueAggregator<Int>()

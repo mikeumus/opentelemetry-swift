@@ -15,14 +15,14 @@
 
 import Foundation
 import NIOConcurrencyHelpers
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
-public class PrometheusExporter: MetricExporter {
+public class PrometheusExporter-mikeumus: MetricExporter {
     fileprivate let metricsLock = Lock()
-    let options: PrometheusExporterOptions
+    let options: PrometheusExporter-mikeumusOptions
     private var metrics = [Metric]()
 
-    public init(options: PrometheusExporterOptions) {
+    public init(options: PrometheusExporter-mikeumusOptions) {
         self.options = options
     }
 
@@ -43,7 +43,7 @@ public class PrometheusExporter: MetricExporter {
     }
 }
 
-public struct PrometheusExporterOptions {
+public struct PrometheusExporter-mikeumusOptions {
     var url: String
 
     public init(url: String) {

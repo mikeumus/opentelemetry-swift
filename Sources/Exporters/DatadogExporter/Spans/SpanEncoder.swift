@@ -14,8 +14,8 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 
 internal struct Constants {
     static let ddsource = "ios"

@@ -14,19 +14,19 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
-@testable import PrometheusExporter
+import OpenTelemetrySdk-mikeumus
+@testable import PrometheusExporter-mikeumus
 import XCTest
 
-class PrometheusExporterTests: XCTestCase {
+class PrometheusExporter-mikeumusTests: XCTestCase {
     let metricPushIntervalSec = 0.05
     let waitDuration = 0.1 + 0.1
 
     func testMetricsHttpServerAsync() {
-        let promOptions = PrometheusExporterOptions(url: "http://localhost:9184/metrics/")
-        let promExporter = PrometheusExporter(options: promOptions)
+        let promOptions = PrometheusExporter-mikeumusOptions(url: "http://localhost:9184/metrics/")
+        let promExporter = PrometheusExporter-mikeumus(options: promOptions)
         let simpleProcessor = UngroupedBatcher()
-        let metricsHttpServer = PrometheusExporterHttpServer(exporter: promExporter)
+        let metricsHttpServer = PrometheusExporter-mikeumusHttpServer(exporter: promExporter)
 
         let expec = expectation(description: "Get metrics from server")
 

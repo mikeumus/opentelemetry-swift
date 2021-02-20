@@ -14,8 +14,8 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 
 struct CommonAdapter {
     static func toProtoAttribute(key: String, attributeValue: AttributeValue) -> Opentelemetry_Proto_Common_V1_KeyValue {

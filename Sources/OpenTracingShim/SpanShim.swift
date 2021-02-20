@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 import Opentracing
 
 public class SpanShim: OTSpan, BaseShimProtocol {

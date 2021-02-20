@@ -13,12 +13,12 @@
 // limitations under the License.
 //
 
-@testable import DatadogExporter
-import OpenTelemetryApi
-@testable import OpenTelemetrySdk
+@testable import DatadogExporter-mikeumus
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
 
-class DatadogExporterTests: XCTestCase {
+class DatadogExporter-mikeumusTests: XCTestCase {
     override func setUp() {
         super.setUp()
     }
@@ -70,7 +70,7 @@ class DatadogExporterTests: XCTestCase {
                                                               metricsURL: URL(string: "http://localhost:33333/metrics")!),
                                                           uploadCondition: { true })
 
-        let datadogExporter = try! DatadogExporter(config: exporterConfiguration)
+        let datadogExporter = try! DatadogExporter-mikeumus(config: exporterConfiguration)
 
         let spanProcessor = SimpleSpanProcessor(spanExporter: datadogExporter)
         OpenTelemetrySDK.instance.tracerProvider.addSpanProcessor(spanProcessor)
@@ -128,7 +128,7 @@ class DatadogExporterTests: XCTestCase {
                                                               metricsURL: URL(string: "http://localhost:33333/metrics")!),
                                                           uploadCondition: { true })
 
-        let datadogExporter = try! DatadogExporter(config: exporterConfiguration)
+        let datadogExporter = try! DatadogExporter-mikeumus(config: exporterConfiguration)
 
         let state = MeterSharedState(metricProcessor: UngroupedBatcher(), metricExporter: datadogExporter, metricPushInterval: 0.1)
         let meter = MeterSdkProvider(meterSharedState: state).get(instrumentationName: "MyMeter")

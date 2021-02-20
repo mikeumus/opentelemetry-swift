@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// LabelSet implementation.
 class LabelSetSdk: LabelSet {

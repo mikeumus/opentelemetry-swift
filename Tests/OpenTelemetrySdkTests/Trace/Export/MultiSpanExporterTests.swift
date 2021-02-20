@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 import XCTest
 
 class MultiSpanExporterTests: XCTestCase {

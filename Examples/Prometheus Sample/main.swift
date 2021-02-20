@@ -14,14 +14,14 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
-import PrometheusExporter
+import OpenTelemetrySdk-mikeumus
+import PrometheusExporter-mikeumus
 
 print("Hello Prometheus")
 
-let promOptions = PrometheusExporterOptions(url: "http://192.168.1.167:9184/metrics")
-let promExporter = PrometheusExporter(options: promOptions)
-let metricsHttpServer = PrometheusExporterHttpServer(exporter: promExporter)
+let promOptions = PrometheusExporter-mikeumusOptions(url: "http://192.168.1.167:9184/metrics")
+let promExporter = PrometheusExporter-mikeumus(options: promOptions)
+let metricsHttpServer = PrometheusExporter-mikeumusHttpServer(exporter: promExporter)
 
 DispatchQueue.global(qos: .default).async {
     do {

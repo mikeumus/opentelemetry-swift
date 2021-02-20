@@ -14,9 +14,9 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-@testable import OpenTelemetryProtocolExporter
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetryProtocolExporter-mikeumus
+import OpenTelemetrySdk-mikeumus
 import XCTest
 
 class CommonAdapterTests: XCTestCase {

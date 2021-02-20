@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
 internal class MetricsExporter {
     let metricsDirectory = "com.otel.datadog.metrics/v1"

@@ -14,10 +14,10 @@
 //
 
 import Foundation
-import JaegerExporter
-import OpenTelemetrySdk
-import StdoutExporter
-import ZipkinExporter
+import JaegerExporter-mikeumus
+import OpenTelemetrySdk-mikeumus
+import StdoutExporter-mikeumus
+import ZipkinExporter-mikeumus
 
 let sampleKey = "sampleKey"
 let sampleValue = "sampleValue"
@@ -47,7 +47,7 @@ func childSpan() {
 
 let jaegerCollectorAdress = "localhost"
 let jaegerExporter = JaegerSpanExporter(serviceName: "SimpleExporter", collectorAddress: jaegerCollectorAdress)
-let stdoutExporter = StdoutExporter()
+let stdoutExporter = StdoutExporter-mikeumus()
 
 //let zipkinExporterOptions = ZipkinTraceExporterOptions()
 //let zipkinExporter = ZipkinTraceExporter(options: zipkinExporterOptions)

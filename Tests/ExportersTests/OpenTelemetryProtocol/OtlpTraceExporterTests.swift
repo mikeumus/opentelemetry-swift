@@ -16,9 +16,9 @@
 import Foundation
 import GRPC
 import NIO
-import OpenTelemetryApi
-@testable import OpenTelemetryProtocolExporter
-@testable import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetryProtocolExporter-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
 
 class OtlpTraceExporterTests: XCTestCase {

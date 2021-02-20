@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// This class is not intended to be used in application code and it is used only by OpenTelemetry.
 public class TracerSdkProvider: TracerProvider {

@@ -14,8 +14,8 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 
 internal struct LogAttributes {
     /// Log attributes received from the user. They are subject for sanitization.

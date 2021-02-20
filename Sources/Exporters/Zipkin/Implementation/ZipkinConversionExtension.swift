@@ -14,8 +14,8 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 
 struct ZipkinConversionExtension {
     static let statusCode = "ot.status_code"

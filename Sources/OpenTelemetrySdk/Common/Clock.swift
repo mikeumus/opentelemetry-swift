@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// Interface for getting the current time.
 public protocol Clock: AnyObject {

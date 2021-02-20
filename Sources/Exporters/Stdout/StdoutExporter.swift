@@ -14,10 +14,10 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 
-public class StdoutExporter: SpanExporter {
+public class StdoutExporter-mikeumus: SpanExporter {
     let isDebug: Bool
 
     public init(isDebug: Bool = false) {

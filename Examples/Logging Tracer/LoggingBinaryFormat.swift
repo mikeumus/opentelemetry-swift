@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 struct LoggingBinaryFormat: BinaryFormattable {
     func fromByteArray(bytes: [UInt8]) -> SpanContext? {

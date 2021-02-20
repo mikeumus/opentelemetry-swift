@@ -14,10 +14,10 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-@testable import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
-@testable import ZipkinExporter
+@testable import ZipkinExporter-mikeumus
 
 class ZipkinSpanConverterTests: XCTestCase {
     let defaultZipkinEndpoint = ZipkinEndpoint(serviceName: "TestService")

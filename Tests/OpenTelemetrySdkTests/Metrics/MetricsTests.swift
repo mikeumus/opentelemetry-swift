@@ -13,8 +13,8 @@
 // limitations under the License.
 //
 
-import OpenTelemetryApi
-@testable import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
 
 final class MetricsTests: XCTestCase {

@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// An implementation of the SpanProcessor that converts the ReadableSpan SpanData
 ///  and passes it to the configured exporter.

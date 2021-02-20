@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
 /// Abstracts the `DataUploadWorker`, so we can have no-op uploader in tests.
 internal protocol DataUploadWorkerType {

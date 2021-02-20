@@ -14,9 +14,9 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-@testable import OpenTelemetryProtocolExporter
-@testable import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetryProtocolExporter-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
 
 class SpanAdapterTests: XCTestCase {

@@ -14,9 +14,9 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
-public class InMemoryExporter: SpanExporter {
+public class InMemoryExporter-mikeumus: SpanExporter {
   private var finishedSpanItems: [SpanData] = []
   private var isRunning: Bool = true
 

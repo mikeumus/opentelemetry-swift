@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 class CounterMetricSdk<T: SignedNumeric>: CounterMetricSdkBase<T> {
     override init(name: String) {

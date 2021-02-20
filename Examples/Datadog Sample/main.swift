@@ -13,10 +13,10 @@
 // limitations under the License.
 //
 
-import DatadogExporter
+import DatadogExporter-mikeumus
 import Foundation
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 
 let clientKey = ""
 let apikey = ""
@@ -24,7 +24,7 @@ let apikey = ""
 let sampleKey = "sampleKey"
 let sampleValue = "sampleValue"
 
-let instrumentationLibraryName = "DatadogExporter"
+let instrumentationLibraryName = "DatadogExporter-mikeumus"
 let instrumentationLibraryVersion = "semver:0.1.0"
 var instrumentationLibraryInfo = InstrumentationLibraryInfo(name: instrumentationLibraryName, version: instrumentationLibraryVersion)
 
@@ -45,7 +45,7 @@ let exporterConfiguration = ExporterConfiguration(
     hostName: Host.current().localizedName
 )
 
-let datadogExporter = try! DatadogExporter(config: exporterConfiguration)
+let datadogExporter = try! DatadogExporter-mikeumus(config: exporterConfiguration)
 
 testTraces()
 testMetrics()

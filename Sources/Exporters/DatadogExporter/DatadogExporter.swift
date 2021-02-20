@@ -14,9 +14,9 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
-public class DatadogExporter: SpanExporter, MetricExporter {
+public class DatadogExporter-mikeumus: SpanExporter, MetricExporter {
     let configuration: ExporterConfiguration
     var spansExporter: SpansExporter?
     var logsExporter: LogsExporter?

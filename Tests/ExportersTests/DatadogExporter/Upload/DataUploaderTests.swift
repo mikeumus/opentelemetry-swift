@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-@testable import DatadogExporter
+@testable import DatadogExporter-mikeumus
 import XCTest
 
 class DataUploadURLProviderTests: XCTestCase {

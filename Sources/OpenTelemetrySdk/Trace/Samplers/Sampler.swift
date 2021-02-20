@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// Sampler is used to make decisions on Span sampling.
 public protocol Sampler: AnyObject, CustomStringConvertible {

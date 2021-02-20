@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// Struct that holds global trace parameters.
 public struct TraceConfig: Equatable {

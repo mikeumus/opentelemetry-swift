@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
 class SpanExporterMock: SpanExporter {
     var exportCalledTimes: Int = 0

@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
 internal class SpansExporter {
     let tracesDirectory = "com.otel.datadog.traces/v1"

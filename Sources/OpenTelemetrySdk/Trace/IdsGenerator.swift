@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// Interface that is used by the TracerSdk to generate new SpanId and TraceId.
 public protocol IdsGenerator {

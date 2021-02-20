@@ -14,13 +14,13 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-@testable import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
-@testable import ZipkinExporter
+@testable import ZipkinExporter-mikeumus
 
-class ZipkinExporterTests: XCTestCase {
-    func testZipkinExporterIntegration() {
+class ZipkinExporter-mikeumusTests: XCTestCase {
+    func testZipkinExporter-mikeumusIntegration() {
         let spans = [ZipkinSpanConverterTests.createTestSpan()]
 
         _ = UUID()

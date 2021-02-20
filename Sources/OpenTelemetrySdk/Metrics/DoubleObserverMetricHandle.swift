@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 class DoubleObserverMetricSdk: DoubleObserverMetric {
     public private(set) var observerHandles = [LabelSet: DoubleObserverMetricHandleSdk]()

@@ -10,28 +10,28 @@ let package = Package(
                 .tvOS(.v11),
                 .watchOS(.v3)],
     products: [
-        .library(name: "OpenTelemetryApi", type: .dynamic, targets: ["OpenTelemetryApi"]),
-        .library(name: "libOpenTelemetryApi", type: .static, targets: ["OpenTelemetryApi"]),
-        .library(name: "OpenTelemetrySdk", type: .dynamic, targets: ["OpenTelemetrySdk"]),
-        .library(name: "libOpenTelemetrySdk", type: .static, targets: ["OpenTelemetrySdk"]),
-        .library(name: "OpenTracingShim", type: .dynamic, targets: ["OpenTracingShim"]),
-        .library(name: "libOpenTracingShim", type: .static, targets: ["OpenTracingShim"]),
-        .library(name: "JaegerExporter", type: .dynamic, targets: ["JaegerExporter"]),
-        .library(name: "libJaegerExporter", type: .static, targets: ["JaegerExporter"]),
-        .library(name: "ZipkinExporter", type: .dynamic, targets: ["ZipkinExporter"]),
-        .library(name: "libZipkinExporter", type: .static, targets: ["ZipkinExporter"]),
-        .library(name: "StdoutExporter", type: .dynamic, targets: ["StdoutExporter"]),
-        .library(name: "libStdoutExporter", type: .static, targets: ["StdoutExporter"]),
-        .library(name: "PrometheusExporter", type: .dynamic, targets: ["PrometheusExporter"]),
-        .library(name: "libPrometheusExporter", type: .static, targets: ["PrometheusExporter"]),
-        .library(name: "OpenTelemetryProtocolExporter", type: .dynamic, targets: ["OpenTelemetryProtocolExporter"]),
-        .library(name: "libOpenTelemetryProtocolExporter", type: .static, targets: ["OpenTelemetryProtocolExporter"]),
-        .library(name: "InMemoryExporter", type: .dynamic, targets: ["InMemoryExporter"]),
-        .library(name: "libInMemoryExporter", type: .static, targets: ["InMemoryExporter"]),
-        .library(name: "DatadogExporter", type: .dynamic, targets: ["DatadogExporter"]),
-        .library(name: "libDatadogExporter", type: .static, targets: ["DatadogExporter"]),
-        .executable(name: "simpleExporter", targets: ["SimpleExporter"]),
-        .executable(name: "loggingTracer", targets: ["LoggingTracer"]),
+        //.library(name: "OpenTelemetryApi-mikeumus", type: .dynamic, targets: ["OpenTelemetryApi-mikeumus"]),
+        //.library(name: "libOpenTelemetryApi-mikeumus", type: .static, targets: ["OpenTelemetryApi-mikeumus"]),
+        //.library(name: "OpenTelemetrySdk-mikeumus", type: .dynamic, targets: ["OpenTelemetrySdk-mikeumus"]),
+        //.library(name: "libOpenTelemetrySdk-mikeumus", type: .static, targets: ["OpenTelemetrySdk-mikeumus"]),
+        //.library(name: "OpenTracingShim-mikeumus", type: .dynamic, targets: ["OpenTracingShim-mikeumus"]),
+        //.library(name: "libOpenTracingShim-mikeumus-mikeumus", type: .static, targets: ["OpenTracingShim-mikeumus"]),
+        .library(name: "JaegerExporter-mikeumus", type: .dynamic, targets: ["JaegerExporter-mikeumus"]),
+        .library(name: "libJaegerExporter-mikeumus", type: .static, targets: ["JaegerExporter-mikeumus"]),
+        //.library(name: "ZipkinExporter-mikeumus", type: .dynamic, targets: ["ZipkinExporter-mikeumus"]),
+        //.library(name: "libZipkinExporter-mikeumus", type: .static, targets: ["ZipkinExporter-mikeumus"]),
+        //.library(name: "StdoutExporter-mikeumus", type: .dynamic, targets: ["StdoutExporter-mikeumus"]),
+        //.library(name: "libStdoutExporter-mikeumus", type: .static, targets: ["StdoutExporter-mikeumus"]),
+        //.library(name: "PrometheusExporter-mikeumus", type: .dynamic, targets: ["PrometheusExporter-mikeumus"]),
+        //.library(name: "libPrometheusExporter-mikeumus", type: .static, targets: ["PrometheusExporter-mikeumus"]),
+        //.library(name: "OpenTelemetryProtocolExporter-mikeumus", type: .dynamic, targets: ["OpenTelemetryProtocolExporter-mikeumus"]),
+        //.library(name: "libOpenTelemetryProtocolExporter-mikeumus", type: .static, targets: ["OpenTelemetryProtocolExporter-mikeumus"]),
+        //.library(name: "InMemoryExporter-mikeumus", type: .dynamic, targets: ["InMemoryExporter-mikeumus"]),
+        //.library(name: "libInMemoryExporter-mikeumus", type: .static, targets: ["InMemoryExporter-mikeumus"]),
+        //.library(name: "DatadogExporter-mikeumus", type: .dynamic, targets: ["DatadogExporter-mikeumus"]),
+        //.library(name: "libDatadogExporter-mikeumus", type: .static, targets: ["DatadogExporter-mikeumus"]),
+        //.executable(name: "simpleExporter-mikeumus", targets: ["SimpleExporter"]),
+        //.executable(name: "loggingTracer-mikeumus", targets: ["LoggingTracer"]),
     ],
     dependencies: [
         .package(name: "Opentracing", url: "https://github.com/undefinedlabs/opentracing-objc", from: "0.5.2"),
@@ -42,108 +42,108 @@ let package = Package(
         .package(name: "swift-atomics", url: "https://github.com/apple/swift-atomics.git", from: "0.0.1")
     ],
     targets: [
-        .target(name: "OpenTelemetryApi",
-                dependencies: []
-        ),
-        .target(name: "OpenTelemetrySdk",
-                dependencies: ["OpenTelemetryApi",
-                               .product(name: "Atomics", package: "swift-atomics")]
-        ),
-        .target(name: "OpenTracingShim",
-                dependencies: ["OpenTelemetrySdk",
-                               "Opentracing"]
-        ),
-        .target(name: "JaegerExporter",
-                dependencies: ["OpenTelemetrySdk",
-                               .product(name: "Thrift", package: "Thrift")],
-                path: "Sources/Exporters/Jaeger"
-        ),
-        .target(name: "ZipkinExporter",
-                dependencies: ["OpenTelemetrySdk"],
-                path: "Sources/Exporters/Zipkin"
-        ),
-        .target(name: "PrometheusExporter",
-                dependencies: ["OpenTelemetrySdk",
-                               .product(name: "NIO", package: "swift-nio"),
-                               .product(name: "NIOHTTP1", package: "swift-nio")],
-                path: "Sources/Exporters/Prometheus"
-        ),
-        .target(name: "OpenTelemetryProtocolExporter",
-                dependencies: ["OpenTelemetrySdk",
-                               .product(name: "GRPC", package: "grpc-swift")],
-                path: "Sources/Exporters/OpenTelemetryProtocol"
-        ),
-        .target(name: "StdoutExporter",
-                dependencies: ["OpenTelemetrySdk"],
-                path: "Sources/Exporters/Stdout"
-        ),
-        .target(name: "InMemoryExporter",
-                dependencies: ["OpenTelemetrySdk"],
-                path: "Sources/Exporters/InMemory"
-        ),
-        .target(name: "DatadogExporter",
-                dependencies: ["OpenTelemetrySdk"],
-                path: "Sources/Exporters/DatadogExporter",
-                exclude: ["NOTICE", "README.md"]
-        ),
-        .testTarget(name: "OpenTelemetryApiTests",
-                    dependencies: ["OpenTelemetryApi"],
-                    path: "Tests/OpenTelemetryApiTests"
-        ),
-        .testTarget(name: "OpenTracingShimTests",
-                    dependencies: ["OpenTracingShim",
-                                   "OpenTelemetrySdk"],
-                    path: "Tests/OpenTracingShim"
-        ),
-        .testTarget(name: "OpenTelemetrySdkTests",
-                    dependencies: ["OpenTelemetryApi",
-                                   "OpenTelemetrySdk"],
-                    path: "Tests/OpenTelemetrySdkTests"
-        ),
-        .testTarget(name: "JaegerExporterTests",
-                    dependencies: ["JaegerExporter"],
+//        .target(name: "OpenTelemetryApi-mikeumus",
+//                dependencies: []
+//        ),
+//        .target(name: "OpenTelemetrySdk-mikeumus",
+//                dependencies: ["OpenTelemetryApi-mikeumus",
+//                               .product(name: "Atomics", package: "swift-atomics")]
+//        ),
+//        .target(name: "OpenTracingShim-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus",
+//                               "Opentracing"]
+//        ),
+//        .target(name: "JaegerExporter-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus",
+//                               .product(name: "Thrift", package: "Thrift")],
+//                path: "Sources/Exporters/Jaeger"
+//        ),
+//        .target(name: "ZipkinExporter-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus"],
+//                path: "Sources/Exporters/Zipkin"
+//        ),
+//        .target(name: "PrometheusExporter-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus",
+//                               .product(name: "NIO", package: "swift-nio"),
+//                               .product(name: "NIOHTTP1", package: "swift-nio")],
+//                path: "Sources/Exporters/Prometheus"
+//        ),
+//        .target(name: "OpenTelemetryProtocolExporter-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus",
+//                               .product(name: "GRPC", package: "grpc-swift")],
+//                path: "Sources/Exporters/OpenTelemetryProtocol"
+//        ),
+//        .target(name: "StdoutExporter-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus"],
+//                path: "Sources/Exporters/Stdout"
+//        ),
+//        .target(name: "InMemoryExporter-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus"],
+//                path: "Sources/Exporters/InMemory"
+//        ),
+//        .target(name: "DatadogExporter-mikeumus",
+//                dependencies: ["OpenTelemetrySdk-mikeumus"],
+//                path: "Sources/Exporters/DatadogExporter-mikeumus",
+//                exclude: ["NOTICE", "README.md"]
+//        ),
+//        .testTarget(name: "OpenTelemetryApi-mikeumusTests",
+//                    dependencies: ["OpenTelemetryApi-mikeumus"],
+//                    path: "Tests/OpenTelemetryApi-mikeumusTests"
+//        ),
+//        .testTarget(name: "OpenTracingShim-mikeumusTests",
+//                    dependencies: ["OpenTracingShim-mikeumus",
+//                                   "OpenTelemetrySdk-mikeumus"],
+//                    path: "Tests/OpenTracingShim-mikeumus"
+//        ),
+//        .testTarget(name: "OpenTelemetrySdk-mikeumusTests",
+//                    dependencies: ["OpenTelemetryApi-mikeumus",
+//                                   "OpenTelemetrySdk-mikeumus"],
+//                    path: "Tests/OpenTelemetrySdk-mikeumusTests"
+//        ),
+        .testTarget(name: "JaegerExporter-mikeumusTests",
+                    dependencies: ["JaegerExporter-mikeumus"],
                     path: "Tests/ExportersTests/Jaeger"
         ),
-        .testTarget(name: "ZipkinExporterTests",
-                    dependencies: ["ZipkinExporter"],
-                    path: "Tests/ExportersTests/Zipkin"
-        ),
-        .testTarget(name: "PrometheusExporterTests",
-                    dependencies: ["PrometheusExporter"],
-                    path: "Tests/ExportersTests/Prometheus"
-        ),
-        .testTarget(name: "OpenTelemetryProtocolExporterTests",
-                    dependencies: ["OpenTelemetryProtocolExporter"],
-                    path: "Tests/ExportersTests/OpenTelemetryProtocol"
-        ),
-        .testTarget(name: "InMemoryExporterTests",
-                    dependencies: ["InMemoryExporter"],
-                    path: "Tests/ExportersTests/InMemory"
-        ),
-        .testTarget(name: "DatadogExporterTests",
-                    dependencies: ["DatadogExporter",
-                                   .product(name: "NIO", package: "swift-nio"),
-                                   .product(name: "NIOHTTP1", package: "swift-nio")],
-                    path: "Tests/ExportersTests/DatadogExporter"
-        ),
-        .target(name: "LoggingTracer",
-                dependencies: ["OpenTelemetryApi"],
-                path: "Examples/Logging Tracer"
-        ),
-        .target(name: "SimpleExporter",
-                dependencies: ["OpenTelemetrySdk", "JaegerExporter", "StdoutExporter", "ZipkinExporter"],
-                path: "Examples/Simple Exporter",
-                exclude: ["README.md"]
-        ),
-        .target(name: "PrometheusSample",
-                dependencies: ["OpenTelemetrySdk", "PrometheusExporter"],
-                path: "Examples/Prometheus Sample",
-                exclude: ["README.md"]
-        ),
-        .target(name: "DatadogSample",
-                dependencies: ["DatadogExporter"],
-                path: "Examples/Datadog Sample",
-                exclude: ["README.md"]
-        ),
+//        .testTarget(name: "ZipkinExporter-mikeumusTests",
+//                    dependencies: ["ZipkinExporter-mikeumus"],
+//                    path: "Tests/ExportersTests/Zipkin"
+//        ),
+//        .testTarget(name: "PrometheusExporter-mikeumusTests",
+//                    dependencies: ["PrometheusExporter-mikeumus"],
+//                    path: "Tests/ExportersTests/Prometheus"
+//        ),
+//        .testTarget(name: "OpenTelemetryProtocolExporter-mikeumusTests",
+//                    dependencies: ["OpenTelemetryProtocolExporter-mikeumus"],
+//                    path: "Tests/ExportersTests/OpenTelemetryProtocol"
+//        ),
+//        .testTarget(name: "InMemoryExporter-mikeumusTests",
+//                    dependencies: ["InMemoryExporter-mikeumus"],
+//                    path: "Tests/ExportersTests/InMemory"
+//        ),
+//        .testTarget(name: "DatadogExporter-mikeumusTests",
+//                    dependencies: ["DatadogExporter-mikeumus",
+//                                   .product(name: "NIO", package: "swift-nio"),
+//                                   .product(name: "NIOHTTP1", package: "swift-nio")],
+//                    path: "Tests/ExportersTests/DatadogExporter-mikeumus"
+//        ),
+//        .target(name: "LoggingTracer",
+//                dependencies: ["OpenTelemetryApi-mikeumus"],
+//                path: "Examples/Logging Tracer"
+//        ),
+//        .target(name: "SimpleExporter",
+//                dependencies: ["OpenTelemetrySdk-mikeumus", "JaegerExporter-mikeumus", "StdoutExporter-mikeumus", "ZipkinExporter-mikeumus"],
+//                path: "Examples/Simple Exporter",
+//                exclude: ["README.md"]
+//        ),
+//        .target(name: "PrometheusSample",
+//                dependencies: ["OpenTelemetrySdk-mikeumus", "PrometheusExporter-mikeumus"],
+//                path: "Examples/Prometheus Sample",
+//                exclude: ["README.md"]
+//        ),
+//        .target(name: "DatadogSample",
+//                dependencies: ["DatadogExporter-mikeumus"],
+//                path: "Examples/Datadog Sample",
+//                exclude: ["README.md"]
+//        ),
     ]
 )

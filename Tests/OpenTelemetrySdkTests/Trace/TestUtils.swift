@@ -14,8 +14,8 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-@testable import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 
 struct TestUtils {
     static func dateFromNanos(_ nanos: UInt64) -> Date {

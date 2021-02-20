@@ -15,20 +15,20 @@
 
 import Foundation
 
-@testable import InMemoryExporter
-@testable import OpenTelemetrySdk
-@testable import OpenTelemetryApi
+@testable import InMemoryExporter-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
+@testable import OpenTelemetryApi-mikeumus
 import XCTest
 
-final class InMemoryExporterTests: XCTestCase {
+final class InMemoryExporter-mikeumusTests: XCTestCase {
   private var tracerSdkFactory = TracerSdkProvider()
   private var tracer: Tracer!
-  private var exporter: InMemoryExporter!
+  private var exporter: InMemoryExporter-mikeumus!
 
   override func setUp() {
-    exporter = InMemoryExporter()
+    exporter = InMemoryExporter-mikeumus()
     tracerSdkFactory.addSpanProcessor(SimpleSpanProcessor(spanExporter: exporter))
-    tracer = tracerSdkFactory.get(instrumentationName: "InMemoryExporterTests")
+    tracer = tracerSdkFactory.get(instrumentationName: "InMemoryExporter-mikeumusTests")
   }
 
   func testGetFinishedSpanItems() {

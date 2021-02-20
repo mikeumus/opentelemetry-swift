@@ -13,9 +13,9 @@
 // limitations under the License.
 //
 
-@testable import DatadogExporter
-import OpenTelemetryApi
-@testable import OpenTelemetrySdk
+@testable import DatadogExporter-mikeumus
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
 
 class SpansExporterTests: XCTestCase {

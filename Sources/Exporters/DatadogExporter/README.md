@@ -14,7 +14,7 @@ It is currently only using the endpoints for mobile applications and Client toke
 
 The Datadog exporter provides a SpanExporter that must be added to an active SpanProcessor:
 
- Initialize the DatadogExporter with the settings you want for reporting:
+ Initialize the DatadogExporter-mikeumus with the settings you want for reporting:
 
 ```swift
 let exporterConfiguration = ExporterConfiguration(
@@ -27,7 +27,7 @@ let exporterConfiguration = ExporterConfiguration(
     endpoint: Endpoint.us,
     uploadCondition: { true }
 )
-let datadogExporter = try! DatadogExporter(config: exporterConfiguration)
+let datadogExporter = try! DatadogExporter-mikeumus(config: exporterConfiguration)
 ```
 Add this exporter to a SpanProcessor that is active in the tracer
 

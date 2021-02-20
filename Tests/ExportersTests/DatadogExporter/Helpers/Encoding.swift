@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-@testable import DatadogExporter
+@testable import DatadogExporter-mikeumus
 
 extension EncodableValue: Equatable {
     public static func == (lhs: EncodableValue, rhs: EncodableValue) -> Bool {

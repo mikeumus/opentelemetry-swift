@@ -13,10 +13,10 @@
 // limitations under the License.
 //
 
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 import Opentracing
-@testable import OpenTracingShim
+@testable import OpenTracingShim-mikeumus
 import XCTest
 
 class TracerShimTests: XCTestCase {

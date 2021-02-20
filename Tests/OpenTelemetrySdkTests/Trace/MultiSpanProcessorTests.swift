@@ -13,8 +13,8 @@
 // limitations under the License.
 //
 
-import OpenTelemetrySdk
-import OpenTelemetryApi
+import OpenTelemetrySdk-mikeumus
+import OpenTelemetryApi-mikeumus
 import XCTest
 
 class MultiSpanProcessorTest: XCTestCase {

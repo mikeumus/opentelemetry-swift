@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-@testable import OpenTelemetryApi
+@testable import OpenTelemetryApi-mikeumus
 import XCTest
 
 class EntryValueTests: XCTestCase {

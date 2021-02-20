@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
 /// A mutable Clock that allows the time to be set for testing.
 class TestClock: Clock {

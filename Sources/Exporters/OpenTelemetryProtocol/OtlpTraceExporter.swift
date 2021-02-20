@@ -15,8 +15,8 @@
 
 import Foundation
 import GRPC
-import OpenTelemetryApi
-import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+import OpenTelemetrySdk-mikeumus
 
 public class OtlpTraceExporter: SpanExporter {
     let channel: GRPCChannel

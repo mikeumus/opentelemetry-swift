@@ -14,9 +14,9 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
-public struct PrometheusExporterExtensions {
+public struct PrometheusExporter-mikeumusExtensions {
     static let prometheusCounterType = "counter"
     static let prometheusSummaryType = "summary"
     static let prometheusSummarySumPostFix = "_sum"
@@ -25,7 +25,7 @@ public struct PrometheusExporterExtensions {
     static let prometheusSummaryQuantileLabelValueForMin = "0"
     static let prometheusSummaryQuantileLabelValueForMax = "1"
 
-    static func writeMetricsCollection(exporter: PrometheusExporter) -> String {
+    static func writeMetricsCollection(exporter: PrometheusExporter-mikeumus) -> String {
         var output = ""
         let metrics = exporter.getAndClearMetrics()
         let now = String(Int64((Date().timeIntervalSince1970 * 1000.0).rounded()))
@@ -37,24 +37,24 @@ public struct PrometheusExporterExtensions {
                 switch metric.aggregationType {
                 case .doubleSum:
                     let sum = metricData as! SumData<Double>
-                    output += PrometheusExporterExtensions.writeSum(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, doubleValue: sum.sum)
+                    output += PrometheusExporter-mikeumusExtensions.writeSum(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, doubleValue: sum.sum)
                 case .intSum:
                     let sum = metricData as! SumData<Int>
-                    output += PrometheusExporterExtensions.writeSum(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, doubleValue: Double(sum.sum))
+                    output += PrometheusExporter-mikeumusExtensions.writeSum(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, doubleValue: Double(sum.sum))
                 case .doubleSummary:
                     let summary = metricData as! SummaryData<Double>
                     let count = summary.count
                     let sum = summary.sum
                     let min = summary.min
                     let max = summary.max
-                    output += PrometheusExporterExtensions.writeSummary(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, metricName: metric.name, sum: sum, count: count, min: min, max: max)
+                    output += PrometheusExporter-mikeumusExtensions.writeSummary(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, metricName: metric.name, sum: sum, count: count, min: min, max: max)
                 case .intSummary:
                     let summary = metricData as! SummaryData<Int>
                     let count = summary.count
                     let sum = summary.sum
                     let min = summary.min
                     let max = summary.max
-                    output += PrometheusExporterExtensions.writeSummary(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, metricName: metric.name, sum: Double(sum), count: count, min: Double(min), max: Double(max))
+                    output += PrometheusExporter-mikeumusExtensions.writeSummary(prometheusMetric: prometheusMetric, timeStamp: now, labels: labels, metricName: metric.name, sum: Double(sum), count: count, min: Double(min), max: Double(max))
                 }
             }
         }

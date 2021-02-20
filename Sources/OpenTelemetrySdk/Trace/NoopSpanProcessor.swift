@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 public struct NoopSpanProcessor: SpanProcessor {
     public init() {}

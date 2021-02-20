@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 class LoggingTracer: Tracer {
     let tracerName = "LoggingTracer"

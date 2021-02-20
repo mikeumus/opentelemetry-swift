@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi
+import OpenTelemetryApi-mikeumus
 
 /// Implementation of the SpanProcessor that batches spans exported by the SDK then pushes
 /// to the exporter pipeline.

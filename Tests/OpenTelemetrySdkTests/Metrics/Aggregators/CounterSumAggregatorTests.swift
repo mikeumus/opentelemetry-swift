@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-@testable import OpenTelemetrySdk
+@testable import OpenTelemetrySdk-mikeumus
 import XCTest
 
 final class MeterFactoryBaseTests: XCTestCase {

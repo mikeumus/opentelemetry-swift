@@ -14,8 +14,8 @@
 //
 
 import Foundation
-import OpenTelemetryApi
-@testable import OpenTelemetrySdk
+import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetrySdk-mikeumus
 
 class ReadableSpanMock: ReadableSpan {
     var hasEnded: Bool = false

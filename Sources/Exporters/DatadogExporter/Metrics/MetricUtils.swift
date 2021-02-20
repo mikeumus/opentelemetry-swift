@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetrySdk
+import OpenTelemetrySdk-mikeumus
 
 internal struct MetricUtils: Encodable {
     private static let gaugeType = "gauge"
