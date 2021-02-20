@@ -15,7 +15,7 @@
 
 import Foundation
 
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 import XCTest
 
 final class DefaultTracerTests: XCTestCase {

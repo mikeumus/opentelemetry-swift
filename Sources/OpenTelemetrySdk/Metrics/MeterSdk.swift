@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 class MeterSdk: Meter {
     fileprivate let collectLock = Lock()

@@ -15,7 +15,7 @@
 
 import Foundation
 import GRPC
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 import OpenTelemetrySdk-mikeumus
 
 public class OtlpTraceExporter: SpanExporter {

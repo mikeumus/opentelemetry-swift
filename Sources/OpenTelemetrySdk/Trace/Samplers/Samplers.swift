@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 /// Struct to access a set of pre-defined Samplers.
 public struct Samplers {

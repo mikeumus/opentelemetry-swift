@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 class BoundMeasureMetricSdkBase<T>: BoundMeasureMetric<T> {
     override init() {

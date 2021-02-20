@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 /// representation of all data collected by the Span.
 public struct SpanData: Equatable {

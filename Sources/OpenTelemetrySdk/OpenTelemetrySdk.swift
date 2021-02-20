@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 /// This class provides a static global accessor for SDK telemetry objects TracerSdkProvider,
 /// MeterSdkFactory BaggageManagerSdk.

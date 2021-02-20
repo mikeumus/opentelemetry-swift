@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 internal class MeasureMetricSdk<T: SignedNumeric & Comparable>: MeasureMetric {
     public private(set) var boundInstruments = [LabelSet: BoundMeasureMetricSdkBase<T>]()

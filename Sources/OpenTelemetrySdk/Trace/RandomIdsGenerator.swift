@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 public struct RandomIdsGenerator: IdsGenerator {
     public init() {}

@@ -15,7 +15,7 @@
 
 import DatadogExporter-mikeumus
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 import OpenTelemetrySdk-mikeumus
 
 let clientKey = ""

@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 @testable import OpenTelemetrySdk-mikeumus
 import XCTest
 @testable import ZipkinExporter-mikeumus

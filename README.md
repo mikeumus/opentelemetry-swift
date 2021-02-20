@@ -5,9 +5,9 @@ A swift [OpenTelemetry](https://opentelemetry.io/) client
 
 ## Installation
 
-This package includes several libraries. The `OpenTelemetryApi-mikeumus` library includes protocols and no-op implementations that comprise the OpenTelemetry API following the [specification](https://github.com/open-telemetry/opentelemetry-specification). The `OpenTelemetrySdk-mikeumus` library is the reference implementation of the API.
+This package includes several libraries. The `OpenTelemetryApi` library includes protocols and no-op implementations that comprise the OpenTelemetry API following the [specification](https://github.com/open-telemetry/opentelemetry-specification). The `OpenTelemetrySdk-mikeumus` library is the reference implementation of the API.
 
-Libraries that produce telemetry data should only depend on `OpenTelemetryApi-mikeumus`, and defer the choice of the SDK to the application developer. Applications may depend on `OpenTelemetrySdk-mikeumus` or another package that implements the API.
+Libraries that produce telemetry data should only depend on `OpenTelemetryApi`, and defer the choice of the SDK to the application developer. Applications may depend on `OpenTelemetrySdk-mikeumus` or another package that implements the API.
 
 **Please note** that this library is currently in *alpha*, and shouldn't be used in production environments.
 
@@ -19,10 +19,10 @@ opentelemetry-swift is designed for Swift 5. To depend on the  opentelemetry-swi
 .package(url: "https://github.com/open-telemetry/opentelemetry-swift", from: "0.4.0"),
 ```
 
-and to your application/library target, add `OpenTelemetryApi-mikeumus` or  `OpenTelemetrySdk-mikeumus`to your `dependencies`, e.g. like this:
+and to your application/library target, add `OpenTelemetryApi` or  `OpenTelemetrySdk-mikeumus`to your `dependencies`, e.g. like this:
 
 ```
-.target(name: "ExampleTelemetryProducerApp", dependencies: ["OpenTelemetryApi-mikeumus"]),
+.target(name: "ExampleTelemetryProducerApp", dependencies: ["OpenTelemetryApi"]),
 ```
 
 or 

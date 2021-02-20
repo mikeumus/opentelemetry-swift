@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 /// SpanBuilderSdk is SDK implementation of SpanBuilder.
 public class SpanBuilderSdk: SpanBuilder {

@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 
 class LoggingTracerProvider: TracerProvider {
     func get(instrumentationName: String, instrumentationVersion: String?) -> Tracer {

@@ -14,7 +14,7 @@
 //
 
 import OpenTelemetrySdk-mikeumus
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 import XCTest
 
 class MultiSpanProcessorTest: XCTestCase {

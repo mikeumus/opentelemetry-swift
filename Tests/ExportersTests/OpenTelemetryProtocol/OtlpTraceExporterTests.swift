@@ -16,7 +16,7 @@
 import Foundation
 import GRPC
 import NIO
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 @testable import OpenTelemetryProtocolExporter-mikeumus
 @testable import OpenTelemetrySdk-mikeumus
 import XCTest

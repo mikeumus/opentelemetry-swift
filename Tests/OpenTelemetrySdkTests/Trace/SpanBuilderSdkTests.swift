@@ -13,7 +13,7 @@
 // limitations under the License.
 //
 
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 import OpenTelemetrySdk-mikeumus
 import XCTest
 

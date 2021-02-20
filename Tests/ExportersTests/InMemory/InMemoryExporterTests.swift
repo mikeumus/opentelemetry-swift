@@ -17,7 +17,7 @@ import Foundation
 
 @testable import InMemoryExporter-mikeumus
 @testable import OpenTelemetrySdk-mikeumus
-@testable import OpenTelemetryApi-mikeumus
+@testable import OpenTelemetryApi
 import XCTest
 
 final class InMemoryExporter-mikeumusTests: XCTestCase {

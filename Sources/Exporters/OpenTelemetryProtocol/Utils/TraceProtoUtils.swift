@@ -14,7 +14,7 @@
 //
 
 import Foundation
-import OpenTelemetryApi-mikeumus
+import OpenTelemetryApi
 import OpenTelemetrySdk-mikeumus
 import SwiftProtobuf
 
